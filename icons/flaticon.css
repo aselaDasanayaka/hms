@@ -1,0 +1,45 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("flaticon.eot");
+	src: url("flaticon.eot#iefix") format("embedded-opentype"),
+	url("flaticon.woff") format("woff"),
+	url("flaticon.ttf") format("truetype"),
+	url("flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	text-align: center;
+	white-space:pre;
+	font-family: Flaticon;
+    font-size: 48px;
+	font-style: normal;
+}
+.flaticon-family21:before {
+	content: "\e000 \A";
+}
+.flaticon-first21:before {
+	content: "\e001 \A";
+}
+.flaticon-healthclinic2:before {
+	content: "\e002 \A";
+}
+.flaticon-md:before {
+	content: "\e003 \A";
+}
+.flaticon-microscope4:before {
+	content: "\e004 \A";
+}
+.flaticon-nurse8:before {
+	content: "\e005 \A";
+}
+.flaticon-pill:before {
+	content: "\e006 \A";
+}
+.flaticon-stethoscope11:before {
+	content: "\e007 \A";
+}
+.flaticon-transfusion1:before {
+	content: "\e008 \A";
+}

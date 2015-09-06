@@ -1,0 +1,261 @@
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(../fonts/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'OpenSansRegular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(../fonts/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+body{
+	font-family: 'OpenSansRegular';
+	color: #000;
+	padding: 0;
+	margin: 0;
+}
+h1, h2{
+	font-family: 'OpenSans';
+	color: #485461;
+	padding: 20px 40px;
+}
+div#contentPane{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+table.DisplayContent{
+	width: 100%;
+}
+table.DisplayContent td.dataRowid{
+	padding-left: 20px;
+	padding-right: 10px;
+	text-align: right;
+}
+table.DisplayContent td.dataRowImage{
+	width: 150px;
+	text-align: center;
+}
+table.DisplayContent td.dataRowGender{
+	width: 50px;
+	text-align: center;
+}
+table.DisplayContent tr{
+	background: rgba(60,180,120,0.1);
+}
+table.DisplayContent tr:hover{
+	background: rgba(60,180,120,0.3);
+}
+table.DisplayContent tr.DisplayContentHeader{
+	background:none;
+	font-family: 'OpenSansRegular';
+	font-size: 16pt;
+	color: #485461;
+}
+table.DisplayContent tr.DisplayContentHeader td{
+	padding-bottom: 20px;
+}
+table.DisplayContent tr.newPatientUpdateFormRow td{
+	background: #1183c4;
+	height: 70px;
+}
+img.statusImageIcon{
+	vertical-align: middle;
+	padding-right: 5px;
+	padding-bottom: 10px;
+}
+div#updateRowShadow{
+	position: absolute;
+	top: 175px;
+	width: 100%;
+	height: 70px;
+	box-shadow: 0 0 70px -15px #000;
+	z-index: -1;
+}
+input{
+	font-size: 12pt;
+	font-family: 'OpenSansRegular';
+	color: #000;
+	padding: 7px;
+	box-shadow: 0 1px 3px -1px #000;
+	border: solid #106291 thin;
+}
+input.AgeInput, input.GenderInput, input.IdInput{
+	width: 100px;
+}
+
+/*--------------------------------------------------------------------------------------------------*/
+/*----------------------------------------MiniSideBar-----------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+div#sidebarMini{
+	left:0;
+	background: #13171b;
+	border-right: solid #13171b 1px;
+	position: fixed;
+	display: block;
+	height: 100%;
+	width: 100px;
+	color: #485461;
+	box-shadow: 0 0 70px -10px #000;
+	text-align: center;
+	vertical-align: middle;
+	z-index: 9999;
+	overflow: hidden;
+	transition: all .3s;
+}
+div#sidebarMini:hover, div#sidebarMini:active{
+	width: 300px;
+}
+div#sidebarMini div#settingsPanel{
+	position: absolute;
+	left: -200px;
+	height: 200px;
+}
+div#sidebarMini div#userInformation{
+
+	color: #fff;
+	width:300px;
+	background:rgba(0,0,0,0.3); 
+	text-align:left;
+	overflow: hidden;
+}
+div#sidebarMini div#userInformation span{
+	padding: 10px;
+}
+div#sidebarMini img#sidebarLogo{
+	padding: 40px 20px;
+}
+div#sidebarMini img#staffUserImage{
+	left: 0;
+}
+div#sidebarMini span{
+	font-family: "OpenSansRegular";
+	font-size: 12pt;
+	display: block;
+	vertical-align: middle;
+	overflow: hidden;
+	padding: 10px 0;
+}
+div#sidebarMini div{
+	display: block;
+	width: 100px;
+	overflow: hidden;
+	min-height: 80px;
+}
+div#sidebarMini span#stats_servedToday{
+	text-align: left;
+	display: block;
+	width: 300px;
+	overflow: hidden;
+	background: rgba(0,0,0,0.2);
+}
+div#sidebarMini div.button_mini{
+	background: no-repeat;
+	background-position: 0 0;
+	position: absolute;
+	bottom: 0;
+	display: block;
+	width: 200px;
+	overflow: hidden;
+	min-height: 40px;
+	cursor: pointer;
+	text-align: left;
+	padding-left: 100px;
+	padding-top:20px;
+	vertical-align: middle;
+	transition: background-color .2s, background-position-y  .2s ease-out;
+}
+div#sidebarMini div.button_mini:hover{
+	background-position-y:-60px;
+	color: #fff;
+}
+
+div#sidebarMini div#homeButton_mini{bottom: 180px; background-image: url("../img/icons_sideMini_home.png")}
+div#sidebarMini div#preferencesButton_mini{bottom: 120px; background-image: url("../img/icons_sideMini_preferences.png")}
+div#sidebarMini div#logoutButton_mini{bottom: 60px; background-image: url("../img/icons_sideMini_logout.png")}
+div#sidebarMini div#quitButton_mini{bottom: 0; background-image: url("../img/icons_sideMini_quit.png")}
+
+div#sidebarMini div#homeButton_mini:hover{background-color:#1183c4;}
+div#sidebarMini div#preferencesButton_mini:hover{background-color:#11c44c;}
+div#sidebarMini div#logoutButton_mini:hover{background-color:#d59b11;}
+div#sidebarMini div#quitButton_mini:hover{background-color:#c01d30;}
+
+div#darkenTheWorld{
+	background: rgba(19,23,27,0.8);
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+}
+/*--------------------------------------------------------------------------------------------------*/
+/*----------------------------------------Home-----------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+div#home h1{
+	padding-top: 40px;
+	margin-top: 0;
+}
+div#home{
+	background: url("../img/bg.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	margin-top: 0;
+	padding-top: 0;	
+	position: fixed;
+	overflow: auto;
+}
+div#home div{
+	margin:10px;
+	display: block;
+	padding: 20px;
+	float:left;
+	background: rgba(255,255,255,0.6);
+	border-radius: 4px;
+	border: solid #ccc thin;
+	margin-left: 30px;
+}
+div#home div h2{
+	height: 60px;
+	padding:10px;
+	margin-right: 10px;
+	display: block;
+	float:left;
+}
+div#home div span{
+	text-align: center;
+	display: block;
+	width: 100px;
+	padding: 20px;
+	float:left;
+	border-radius: 4px;
+	border:solid rgba(0,0,0,0.2) thin;
+	margin-left: 10px;
+	transition: all .1s;
+}
+div#home div span:hover{
+	color:#fff;
+	text-align: center;
+}
+div#home div.patients span:hover{
+	background:rgba(0,166,81,1);
+}
+div#home div.labs span:hover{
+	background:rgba(17,131,196,1);
+}
+div#home div.employees span:hover{
+	background:rgba(190,42,43,1);
+}
+/*--------------------------------------------------------------------------------------------------*/
+/*----------------------------------------List View-----------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+/* none yet */
