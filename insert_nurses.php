@@ -25,7 +25,7 @@ $sql = "INSERT INTO `hospitalmanagementdb`.`employee` (
 	`Qualification`, 
 	`ContactNo`, 
 	`Timestamp`
-	) VALUES (NULL, 'Doctor', '$i_Name', '$i_Salary', '$i_Gender', '$i_Experience', '$i_Qualification', '$i_ContactNo', CURRENT_TIMESTAMP);";
+	) VALUES (NULL, 'Nurse', '$i_Name', '$i_Salary', '$i_Gender', '$i_Experience', '$i_Qualification', '$i_ContactNo', CURRENT_TIMESTAMP);";
 
 if ($conn->query($sql) === TRUE) {
     ?>	

@@ -31,13 +31,28 @@ div#contentPane{
 table.DisplayContent{
 	width: 100%;
 }
+table.DisplayContent td{
+	text-align: left;
+	padding:0 10px;
+}
 table.DisplayContent td.dataRowid{
 	padding-left: 20px;
-	padding-right: 10px;
+	padding-right: 20px;
+	background: rgba(60,180,120,0.3);
+	width: 40px;
 	text-align: right;
 }
 table.DisplayContent td.dataRowImage{
 	width: 150px;
+	text-align: center;
+}
+
+table.DisplayContent input#updateSalary{
+	width: 100px;
+	text-align: right;
+}
+table.DisplayContent input#updateGender{
+	width: 100px;
 	text-align: center;
 }
 table.DisplayContent td.dataRowGender{
@@ -45,6 +60,7 @@ table.DisplayContent td.dataRowGender{
 	text-align: center;
 }
 table.DisplayContent tr{
+	height: 70px;
 	background: rgba(60,180,120,0.1);
 }
 table.DisplayContent tr:hover{
@@ -53,7 +69,7 @@ table.DisplayContent tr:hover{
 table.DisplayContent tr.DisplayContentHeader{
 	background:none;
 	font-family: 'OpenSansRegular';
-	font-size: 16pt;
+	font-size: 14pt;
 	color: #485461;
 }
 table.DisplayContent tr.DisplayContentHeader td{
@@ -100,7 +116,7 @@ div#sidebarMini{
 	height: 100%;
 	width: 100px;
 	color: #485461;
-	box-shadow: 0 0 70px -10px #000;
+	/*box-shadow: 0 0 70px -10px #000;*/
 	text-align: center;
 	vertical-align: middle;
 	z-index: 9999;
@@ -255,7 +271,48 @@ div#home div.labs span:hover{
 div#home div.employees span:hover{
 	background:rgba(190,42,43,1);
 }
+/*PhotoCaptures*/
+#photoCapture #canvas{
+	display: none;
+}
+#photoCapture #camera{
+	margin-left:37px;
+	display: block;
+	width: 70px;
+	height: 70px;
+	overflow: hidden;
+}
+#photoCapture #video{
+	margin-left: -27px;
+	background:#000;
+	display: block;
+	width: 124px;
+	height: 70px;
+}
+#photoCapture .output img#photo{
+	margin-left:37px;
+	display: none;
+	width: 70px;
+	height: 70px;
+}
+/**/
 /*--------------------------------------------------------------------------------------------------*/
 /*----------------------------------------List View-----------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------*/
+
+#search_ipd{
+	position: absolute;
+	right: 0px;
+	top: 20px;
+	width: 400px;
+	padding: 20px;
+	padding-bottom: 10px;
+	background: rgba(0,0,0,0.8);
+	color:#fff;
+	transition: all .3s;
+	opacity: 0.4;
+}
+#search_ipd:hover{
+	opacity: 1;
+}
 /* none yet */

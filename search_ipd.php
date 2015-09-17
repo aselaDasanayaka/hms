@@ -1,6 +1,8 @@
 <?php
 include 'userInfo.php';
 
+$i_search = $_POST["i_search"];
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -16,7 +18,7 @@ $sql = "SELECT `RecordId` ,
 `Photo` ,
 `Address` ,
 `Comments` ,
-`Time_Admitted` FROM  `records_ipd` ORDER BY `RecordId` DESC";
+`Time_Admitted` FROM  `records_ipd` WHERE `PatientId` = '$i_search'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

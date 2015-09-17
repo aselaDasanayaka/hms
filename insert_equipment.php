@@ -15,17 +15,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO `hospitalmanagementdb`.`employee` (
-	`ID`, 
-	`JobType`, 
-	`Name`, 
-	`Salary`, 
-	`Gender`, 
-	`Experience`, 
-	`Qualification`, 
-	`ContactNo`, 
-	`Timestamp`
-	) VALUES (NULL, 'Doctor', '$i_Name', '$i_Salary', '$i_Gender', '$i_Experience', '$i_Qualification', '$i_ContactNo', CURRENT_TIMESTAMP);";
+$sql = "INSERT INTO `hospitalmanagementdb`.`patient_equipments` (`RecordId`, `PatientID`, `EquitmentId`) VALUES (NULL, \'93989871\', \'2\');";
 
 if ($conn->query($sql) === TRUE) {
     ?>	

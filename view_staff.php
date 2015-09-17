@@ -9,7 +9,7 @@ if ($conn->connect_error) {
 } 
 
 $sql = "SELECT *
- FROM `employee` WHERE `JobType` = 'Doctor' ORDER BY `ID` DESC";
+ FROM `employee` WHERE  `JobType` IN ('ticketStaff',  'Staff') ORDER BY `ID` DESC";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -18,7 +18,7 @@ if ($result->num_rows > 0) {
     ?>	
 	<tr>
 		<td class="dataRowid"><?php echo $row["ID"] ?></td>
-		<td class="dataRowImage"><img src="people/<?php echo "doctor.png"?>" width='70'/></td>
+		<td class="dataRowImage"><img src="people/<?php echo $row["Photo"]?>" width='70'/></td>
 		<td><?php echo $row["Name"] ?></td>
 		<td><?php echo $row["Salary"] ?></td>
 		<td class="dataRowGender"><?php echo $row["Gender"] ?></td>
@@ -26,7 +26,6 @@ if ($result->num_rows > 0) {
 		<td><?php echo $row["Qualification"] ?></td>
 		<td><?php echo $row["ContactNo"] ?></td>
 		<td></td>
-		
 	</tr>
 	<!-- <tr>
 		<td class="dataRowid"></td>

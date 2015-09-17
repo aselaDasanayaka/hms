@@ -17,7 +17,7 @@ if ($result->num_rows > 0) {
     ?>	
 	<tr>
 		<td class="dataRowid"><?php echo $row["RecordId"] ?></td>
-		<td class="dataRowImage"><img src="patients/<?php if(strcmp($row["Gender"], "Female")==0) echo "Fe";
+		<td class="dataRowImage"><img src="people/<?php if(strcmp($row["Gender"], "Female")==0) echo "Fe";
 		?>male.png" width='70'/></td>
 		<td><?php echo $row["Name"] ?></td>
 		<td><?php echo $row["Age"] ?></td>

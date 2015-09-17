@@ -8,32 +8,26 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT `RecordId` ,
-`PatientId` ,
-`Name` ,
-`Age` ,
-`Gender` ,
-`Photo` ,
-`Address` ,
-`Comments` ,
-`Time_Admitted` FROM  `records_ipd` ORDER BY `RecordId` DESC";
+$sql = "SELECT `patient_equipments`.`RecordId`,\n"
+    . "`patient_equipments`.`PatientID`,\n"
+    . "`records_ipd`.`Name` ,\n"
+    . "`lab_equipment`.`Name` AS `tName`,\n"
+    . "`lab_equipment`.`Description`\n"
+    . "FROM `patient_equipments`, `records_ipd`,`lab_equipment`\n"
+    . "WHERE `lab_equipment`.`equipmentID` = `patient_equipments`.`EquitmentId`\n"
+    . "AND `patient_equipments`.`PatientID` = `records_ipd`.`PatientId` ORDER BY `patient_equipments`.`RecordId` DESC";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-    ?>
+    ?>	
 	<tr>
 		<td class="dataRowid"><?php echo $row["RecordId"] ?></td>
-		<td class="dataRowImage"><img src="people/<?php echo $row["Photo"]?>" width='70'/></td>
-		<td><?php echo $row["PatientId"] ?></td>
-		<td><?php echo $row["Name"] ?></td>
-		<td><?php echo $row["Age"] ?></td>
-		<td class="dataRowGender"><?php echo $row["Gender"] ?></td>
-		<td><?php echo $row["Address"] ?></td>
-		<td><?php echo $row["Comments"] ?></td>
-		<td><?php echo $row["Time_Admitted"] ?></td>
-		
+		<td><?php echo $row["PatientID"] ?></td>
+		<td><?php echo $row["Name"] ?></td>	
+		<td><?php echo $row["tName"] ?></td>
+		<td><?php echo $row["Description"] ?></td>
 	</tr>
 	<!-- <tr class="DisplayContentHeader">
 					<td class="dataRowid"></td>

@@ -30,7 +30,7 @@ if ($conn->query($sql) === TRUE) {
     ?>	
 	<tr>
 		<td class="dataRowid"><?php echo '*' ?></td>
-		<td class="dataRowImage"><img src="patients/<?php if(strcmp($v_Gender, "Female")==0) echo "Fe";
+		<td class="dataRowImage"><img src="people/<?php if(strcmp($v_Gender, "Female")==0) echo "Fe";
 		?>male.png" width='70'/></td>
 		<td><?php echo $v_Name ?></td>
 		<td><?php echo $v_Age ?></td>
